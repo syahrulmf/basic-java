@@ -19,27 +19,29 @@ public class SwitchStatement {
     }
 
 //    Switch Lambda
-//    switch (nilai) {
-//      case "A" -> System.out.println("Wow, Anda lulus dengan Baik!");
-//      case "B", "C" -> System.out.println("Wow, Anda lulus dengan Cukup Baik!");
-//      case "D" -> System.out.println("Anda tidak lulus!");
-//      default -> {
-//        System.out.println("Mungkin anda salah jurusan!");
-//      }
-//    }
+    switch (nilai) {
+      case "A" -> System.out.println("Wow, Anda lulus dengan Baik!");
+      case "B", "C" -> System.out.println("Wow, Anda lulus dengan Cukup Baik!");
+      case "D" -> System.out.println("Anda tidak lulus!");
+      default -> {
+        System.out.println("Mungkin anda salah jurusan!");
+      }
+    }
 
 //    Switch menggunakan Yield
-//    String ucapan;
-//    ucapan =  switch (nilai) {
-//      case "A":
-//        yield System.out.println("Wow, Anda lulus dengan Baik!");
-//      case "B", "C":
-//        yield System.out.println("Wow, Anda lulus dengan Cukup Baik!");
-//      case "D":
-//        yield System.out.println("Anda tidak lulus!");
-//      default :
-//        yield System.out.println("Mungkin anda salah jurusan!");
-//    };
+    String ucapan;
+    ucapan =  switch (nilai) {
+      case "A":
+        yield "Wow, Anda lulus dengan Baik!";
+      case "B", "C":
+        yield "Wow, Anda lulus dengan Cukup Baik!";
+      case "D":
+        yield "Anda tidak lulus!";
+      default :
+        yield "Mungkin anda salah jurusan!";
+    };
+
+    System.out.println(ucapan);
 
   }
 }
